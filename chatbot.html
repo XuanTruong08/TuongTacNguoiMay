@@ -1,19 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nội Thất Đẳng Cấp</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 15px 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #444;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 15px 20px;
+      display: block;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    .hero {
+      background-image: url('https://via.placeholder.com/1500x500'); /* Thay ảnh này bằng ảnh nội thất của bạn */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .product {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+
+    .product p {
+      font-size: 16px;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
-    <h1 >Chatbot</h1>
 
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="chatbot"
-  agent-id="60648ea8-c0a6-4b31-90f6-ddd7c77f82af"
-  language-code="en"
-></df-messenger>
+  <header>
+    <h1>Nội Thất Đẳng Cấp</h1>
+    <p>Không gian sống hoàn hảo cho bạn</p>
+  </header>
+
+  <nav>
+    <a href="#about">Giới Thiệu</a>
+    <a href="#products">Sản Phẩm</a>
+    <a href="#contact">Liên Hệ</a>
+  </nav>
+
+  <div class="hero">
+    <h1>Thiết Kế Nội Thất Sang Trọng</h1>
+    <p>Khám phá không gian sống hiện đại và đẳng cấp</p>
+  </div>
+
+  <div class="container">
+    <section id="about">
+      <h2 class="section-title">Về Chúng Tôi</h2>
+      <p>
+        Chúng tôi chuyên cung cấp các sản phẩm nội thất chất lượng cao, mang lại sự tiện nghi và thẩm mỹ cho ngôi nhà của bạn. Đội ngũ thiết kế chuyên nghiệp luôn sẵn sàng hỗ trợ bạn tạo nên không gian sống lý tưởng.
+      </p>
+    </section>
+
+    <section id="products">
+      <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+      <div class="products">
+        <div class="product">
+          <img src="https://via.placeholder.com/300x200" alt="Ghế Sofa">
+          <h3>Ghế Sofa Cao Cấp</h3>
+          <p>Thoải mái và sang trọng, phù hợp cho mọi không gian.</p>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/300x200" alt="Bàn Làm Việc">
+          <h3>Bàn Làm Việc Hiện Đại</h3>
+          <p>Thiết kế tinh tế, tối ưu không gian làm việc.</p>
+        </div>
+        <div class="product">
+          <img src="https://via.placeholder.com/300x200" alt="Giường Ngủ">
+          <h3>Giường Ngủ Thoải Mái</h3>
+          <p>Tận hưởng giấc ngủ sâu với thiết kế chuyên biệt.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Nội Thất Đẳng Cấp. Mọi quyền được bảo lưu.</p>
+  </footer>
+
+  <!-- Chatbot Integration -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="chatbot"
+    agent-id="60648ea8-c0a6-4b31-90f6-ddd7c77f82af"
+    language-code="en">
+  </df-messenger>
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
 </body>
 </html>
